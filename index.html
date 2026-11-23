@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>蓦初·衡｜全周期健康管理智能体</title>
+  <meta name="description" content="蓦初高端健身与运动康养全周期健康管理智能体演示面板（合成数据）" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">衡</div>
+        <div class="brand-text">
+          <div class="name">蓦初 · 衡</div>
+          <div class="sub">FULL-CYCLE HEALTH</div>
+        </div>
+      </div>
+
+      <div class="member-switch">
+        <div class="lbl">当前会员 · 统一身份</div>
+        <select id="member-select" aria-label="切换会员"></select>
+        <div class="member-meta" id="member-meta"></div>
+      </div>
+
+      <nav class="nav" id="nav">
+        <a class="nav-item" data-action="goto" data-view="overview"><span class="num">00</span>总览 · 全周期</a>
+
+        <div class="nav-group">第一层 · 基础服务</div>
+        <a class="nav-item" data-action="goto" data-view="profile"><span class="num">01</span>会员档案</a>
+        <a class="nav-item" data-action="goto" data-view="checkin"><span class="num">02</span>到店核对与风险</a>
+
+        <div class="nav-group">第二层 · 线上管理</div>
+        <a class="nav-item" data-action="goto" data-view="plan"><span class="num">03</span>个性化计划</a>
+        <a class="nav-item" data-action="goto" data-view="feedback"><span class="num">04</span>离店反馈与调整</a>
+
+        <div class="nav-group">第三层 · 线下评估与互动</div>
+        <a class="nav-item" data-action="goto" data-view="movement"><span class="num">05</span>动作评估</a>
+        <a class="nav-item" data-action="goto" data-view="game"><span class="num">06</span>趣味训练</a>
+
+        <div class="nav-group">第四层 · 综合协同</div>
+        <a class="nav-item" data-action="goto" data-view="rehab"><span class="num">07</span>康复与慢病</a>
+        <a class="nav-item" data-action="goto" data-view="booking"><span class="num">08</span>预约与场馆服务</a>
+
+        <div class="nav-group">记录</div>
+        <a class="nav-item" data-action="goto" data-view="records"><span class="num">09</span>记录、导出与说明</a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div>合成演示数据 · 非真实会员</div>
+        <div>医疗诊断与治疗决策由具备资质的专业人员做出</div>
+        <div style="margin-top:6px;opacity:.7">WorkBuddy 专家包 · Skill v1.0</div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="crumb">蓦初·衡 <span>/</span> <strong id="crumb-view">总览</strong></div>
+        <div class="topbar-right">
+          <span class="badge demo">● 合成演示数据</span>
+          <span id="top-risk" class="badge muted">未核对</span>
+          <button class="btn sm" id="btn-print" data-action="print">打印报告</button>
+          <button class="btn sm primary" id="btn-demo" data-action="demo">一键连续演示</button>
+        </div>
+      </header>
+
+      <main class="content" id="view"></main>
+    </div>
+  </div>
+
+  <div class="toast-wrap" id="toast-wrap"></div>
+  <div id="modal-root"></div>
+
+  <noscript>
+    <div style="padding:24px;font-family:sans-serif">此面板需要启用 JavaScript 才能运行。</div>
+  </noscript>
+  <script src="core.js"></script>
+  <script src="views.js"></script>
+</body>
+</html>
